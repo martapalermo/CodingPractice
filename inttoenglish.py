@@ -81,7 +81,6 @@ class Solution:
         if (num == 0):
             Solution.wordResult += Solution.numbers[num]
 
-        # return Solution.wordResult
         print(Solution.wordResult)
 
 
