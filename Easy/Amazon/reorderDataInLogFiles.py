@@ -22,18 +22,23 @@ def reorderLogFiles(logs: List[str]) -> List[str]:
     arr1, arr2 = [], []
 
     for log in logs: 
-        if (log.split()[1]).isdigit():
-            arr2.append(log)
+        # if (log.split()[1]).isdigit():
+        if (log.split()[1]).isalpha():
+            arr1.append(log)
         else:
-            arr1.append(log.split())
+            arr2.append(log)
+            # arr1.append(log.split())
+    
+    arr1.sort(key=lambda x:(x.split()[1:len(x)], x.split()[0]))
 
-    arr1.sort(key = lambda x:x[0])
-    arr1.sort(key = lambda x:x[1:])
 
-    for i in range(len(arr1)):
-        arr1[i] = (" ".join(arr1[i]))
-    arr1.extend(arr2)
-    print(arr1)
+    # arr1.sort(key = lambda x:x[0])
+    # arr1.sort(key = lambda x:x[1:])
+
+    # for i in range(len(arr1)):
+    #     arr1[i] = (" ".join(arr1[i]))
+    # arr1.extend(arr2)
+    print(arr1 + arr2)
 
 def main():
 
