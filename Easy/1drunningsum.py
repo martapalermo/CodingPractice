@@ -9,14 +9,19 @@ class Solution(object):
         # initiate runSum arr with value at index 0
         runSum = [nums[0]]
 
+        # iterate thru list in range 1, n 
+        # append new running sums to current runSum list
         for i in range (1, n):
             nums[i] += nums[i-1]
             runSum.append(nums[i])
+        # return runSum 
+        # printing to terminal
         print(runSum)
 
 
 
 def main(): 
+    # testcases 
     num1 = [1,2,3,4]
     num2 = [1,1,1,1,1]
     num3 = [3,1,2,10,1]
