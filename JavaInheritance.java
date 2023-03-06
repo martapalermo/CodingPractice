@@ -1,3 +1,5 @@
+
+
 class Aniaml {
     void walk(){
         System.out.println("I am walking");
