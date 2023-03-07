@@ -23,7 +23,7 @@ class Soccer extends Sports{
 }
 
 class Solution{
-	
+	     
     public static void main(String []args){
         Sports c1 = new Sports();
         Soccer c2 = new Soccer();
